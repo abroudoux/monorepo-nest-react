@@ -1,5 +1,5 @@
 {
-    "name": "template-nest",
+    "name": "monorepo-nest-react-api",
     "version": "0.0.1",
     "scripts": {
         "build": "nest build",
