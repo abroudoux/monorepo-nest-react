@@ -1,0 +1,3 @@
+[submodule "apps/react-template"]
+	path = apps/react-template
+	url = https://github.com/abroudoux/react-template.git
