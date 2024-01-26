@@ -1,1 +1,1 @@
-# NestJs Template
+# nest-auth-template

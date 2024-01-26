@@ -1,17 +1,20 @@
 
-FROM node:20
+FROM node:18
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm i
+RUN npm install
 
 COPY . .
 
-ENV PORT=3001
+COPY .env ./
+
+RUN npm run build
+
+RUN npx prisma generate
 
 EXPOSE 3001
 
-CMD [ "npm", "run", "dev" ]
-
+CMD ["npm", "run", "dev"]
