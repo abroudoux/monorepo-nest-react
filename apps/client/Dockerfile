@@ -1,17 +1,11 @@
 
-FROM node:20
+FROM node:21
 
-WORKDIR /client
+WORKDIR /dist
 
-COPY package*.json ./
+COPY /dist /dist
 
-RUN npm i
+EXPOSE 5173
 
-COPY . .
-
-ENV PORT=
-
-EXPOSE 
-
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "prod" ]
 
